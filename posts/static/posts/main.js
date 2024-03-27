@@ -38,7 +38,7 @@ const likeUnlikePosts = () => {
 
         $.ajax({
             type: 'POST',
-            url:  "/like-unlike/",
+            url:  '',
             data: {
                 'csrfmiddlewaretoken': csrftoken,
                 'pk': clickedId,
@@ -153,6 +153,7 @@ postForm.addEventListener('submit', e=> {
         error: function(error){
             console.log(error)
             handleAlerts('danger', 'oops..something went wrong')
+            postForm.reset()
         }
 
     })
