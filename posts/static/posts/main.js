@@ -47,7 +47,7 @@ const likeUnlikePosts = () => {
 
         $.ajax({
             type: 'POST',
-            url:  '',
+            url:  '/like-unlike/',
             data: {
                 'csrfmiddlewaretoken': csrftoken,
                 'pk': clickedId,
